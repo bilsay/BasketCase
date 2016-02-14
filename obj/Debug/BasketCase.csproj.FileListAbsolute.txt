@@ -1,0 +1,5 @@
+C:\Users\Bilsay\Projects\BasketCase\bin\Debug\BasketCase.dll
+C:\Users\Bilsay\Projects\BasketCase\bin\Debug\BasketCase.pdb
+C:\Users\Bilsay\Projects\BasketCase\obj\Debug\BasketCase.csprojResolveAssemblyReference.cache
+C:\Users\Bilsay\Projects\BasketCase\obj\Debug\BasketCase.dll
+C:\Users\Bilsay\Projects\BasketCase\obj\Debug\BasketCase.pdb
