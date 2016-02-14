@@ -50,18 +50,20 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Domain\Basket.cs" />
-    <Compile Include="Domain\BasketItem.cs" />
-    <Compile Include="Domain\BasketItemType.cs" />
-    <Compile Include="Domain\BasketTotalCalculator.cs" />
-    <Compile Include="Domain\BasketItemGroup.cs" />
+    <Compile Include="Domain\Basket\Basket.cs" />
+    <Compile Include="Domain\Basket\BasketItem.cs" />
+    <Compile Include="Domain\Basket\BasketItemType.cs" />
+    <Compile Include="Tests\BasketTestBase.cs" />
     <Compile Include="Domain\Discounts\DTBasketDiscountCalculator.cs" />
-    <Compile Include="Domain\Discounts\DTDiscountDirectory.cs" />
     <Compile Include="Domain\Discounts\IBasketDiscountCalculator.cs" />
+    <Compile Include="Domain\Discounts\Offers\FourthMilkFreeOffer.cs" />
+    <Compile Include="Domain\Discounts\Offers\FiftyPercentOfOnBreadForTwoButtersOffer.cs" />
+    <Compile Include="Domain\Discounts\Offers\IOffer.cs" />
     <Compile Include="Domain\Prices\DTBasketItemPriceDirectory.cs" />
+    <Compile Include="Domain\Calculators\DTBasketCalculator.cs" />
     <Compile Include="Tests\DTBasketTotalCalculationTests.cs" />
-    <Compile Include="TestBase.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="Tests\TestBase.cs" />
+    <Compile Include="Domain\Calculators\IBasketCalculator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\Directory.cs" />
   </ItemGroup>

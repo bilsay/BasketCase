@@ -1,11 +1,11 @@
-﻿using System.Runtime;
-using BasketCase.Domain;
+﻿using BasketCase.Domain;
+using BasketCase.Domain.Basket;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace BasketCase.Tests
 {
     [TestClass]
-    public class DTBasketTotalCalculationTests : BasketBase
+    public class DTBasketTotalCalculationTests : BasketTestBase
     {
         public void One_Bread_One_Butter_One_Milk_IsAdded()
         {
@@ -16,23 +16,43 @@ namespace BasketCase.Tests
 
         public void Two_Butters_Two_Breads_AreAdded()
         {
-            Basket.Add(new BasketItem(BasketItemType.Milk));
             Basket.Add(new BasketItem(BasketItemType.Butter));
+            Basket.Add(new BasketItem(BasketItemType.Butter));
+            Basket.Add(new BasketItem(BasketItemType.Bread));
             Basket.Add(new BasketItem(BasketItemType.Bread));
         }
 
         public void Four_Milks_Are_Added ()
         {
             Basket.Add(new BasketItem(BasketItemType.Milk));
-            Basket.Add(new BasketItem(BasketItemType.Butter));
-            Basket.Add(new BasketItem(BasketItemType.Bread));
+            Basket.Add(new BasketItem(BasketItemType.Milk));
+            Basket.Add(new BasketItem(BasketItemType.Milk));
+            Basket.Add(new BasketItem(BasketItemType.Milk));
         }
 
         public void Two_Butters_One_Bread_And_8_Milks_Are_Added()
         {
-            Basket.Add(new BasketItem(BasketItemType.Milk));
+            Basket.Add(new BasketItem(BasketItemType.Butter));
             Basket.Add(new BasketItem(BasketItemType.Butter));
             Basket.Add(new BasketItem(BasketItemType.Bread));
+            Basket.Add(new BasketItem(BasketItemType.Milk));
+            Basket.Add(new BasketItem(BasketItemType.Milk));
+            Basket.Add(new BasketItem(BasketItemType.Milk));
+            Basket.Add(new BasketItem(BasketItemType.Milk));
+            Basket.Add(new BasketItem(BasketItemType.Milk));
+            Basket.Add(new BasketItem(BasketItemType.Milk));
+            Basket.Add(new BasketItem(BasketItemType.Milk));
+            Basket.Add(new BasketItem(BasketItemType.Milk));
+        }
+
+
+        [TestMethod]
+        public void Then_Total_Is_Zero ()
+        {
+            Basket.Clear();
+
+            Assert.AreEqual(0, Basket.Discount);
+            Assert.AreEqual(0, Basket.Total);
         }
 
         [TestMethod]
@@ -40,6 +60,7 @@ namespace BasketCase.Tests
         {
             Basket.Clear();
             When(One_Bread_One_Butter_One_Milk_IsAdded);
+            Assert.AreEqual(0, Basket.Discount);
             Assert.AreEqual(2.95, Basket.Total);
         }
 
@@ -48,38 +69,18 @@ namespace BasketCase.Tests
         {
             Basket.Clear();
             When(Two_Butters_Two_Breads_AreAdded);
+            Assert.AreEqual(0.50, Basket.Discount);
             Assert.AreEqual(3.10, Basket.Total);
 
             Basket.Clear();
             When(Four_Milks_Are_Added);
+            Assert.AreEqual(1.15, Basket.Discount);
             Assert.AreEqual(3.45, Basket.Total);
 
             Basket.Clear();
             When(Two_Butters_One_Bread_And_8_Milks_Are_Added);
+            Assert.AreEqual(2.8, Basket.Discount);
             Assert.AreEqual(9.00, Basket.Total);
         }
-
-
-        //public override void When()
-        //{
-        //    this.calc.Add(2, 4);
-        //}
-
-        //public override void When()
-        //{
-        //    this.calc.Add(2, 4);
-        //}
-
-        //[TestMethod]
-        //public void ThenItShouldDisplay6()
-        //{
-        //    Assert.AreEqual(6, this.calc.Result);
-        //}
-
-        //[TestMethod]
-        //public void ThenTheCalculatorShouldNotBeNull()
-        //{
-        //    Assert.IsNotNull(this.calc);
-        //}
     }
 }

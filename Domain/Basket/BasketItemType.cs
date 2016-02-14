@@ -1,4 +1,4 @@
-namespace BasketCase.Domain
+namespace BasketCase.Domain.Basket
 {
     public enum BasketItemType
     {

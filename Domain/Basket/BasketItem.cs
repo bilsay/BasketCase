@@ -1,4 +1,4 @@
-﻿namespace BasketCase.Domain
+﻿namespace BasketCase.Domain.Basket
 {
     public class BasketItem
     {
@@ -14,5 +14,7 @@
             get { return _itemType; }
             set { _itemType = value; }
         }
+
+        public double Price { get; set; }
     }
 }

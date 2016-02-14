@@ -1,4 +1,5 @@
-﻿using BasketCase.Util;
+﻿using BasketCase.Domain.Basket;
+using BasketCase.Util;
 
 namespace BasketCase.Domain.Prices
 {
