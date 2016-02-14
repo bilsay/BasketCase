@@ -6,8 +6,10 @@ using BasketCase.Domain.Prices;
 
 namespace BasketCase.Domain.Calculators
 {
+    //Seperated this responsibility of price calculation for the basket.
     public class DTBasketCalculator : IBasketCalculator
     {
+        //A better way is to inject the discount calculator
         private DTBasketDiscountCalculator _basketDiscountCalculator;
         private DTBasketItemPriceDirectory _priceDirectory;
 

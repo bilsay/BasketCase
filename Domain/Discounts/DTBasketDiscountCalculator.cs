@@ -6,6 +6,7 @@ using BasketCase.Domain.Prices;
 
 namespace BasketCase.Domain.Discounts
 {
+    //This discount calculator handles DT spesific offers
     public class DTBasketDiscountCalculator : IBasketDiscountCalculator
     {
         public IList<IOffer> _offers;
@@ -20,7 +21,6 @@ namespace BasketCase.Domain.Discounts
                 new FiftyPercentOffOnBreadForTwoButtersOffer(),
                 new FourthMilkFreeOffer()
             };
-
         }
 
         public double GetDiscountForBasketItems(IList<BasketItem> items)

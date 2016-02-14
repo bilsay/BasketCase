@@ -4,7 +4,7 @@ using BasketCase.Domain.Calculators;
 
 namespace BasketCase.Tests
 {
-    public abstract class BasketTestBase : TestBase
+    public abstract class DFBasketTestBase : TestBase
     {
         protected Basket Basket;
 

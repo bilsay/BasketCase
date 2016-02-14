@@ -53,7 +53,7 @@
     <Compile Include="Domain\Basket\Basket.cs" />
     <Compile Include="Domain\Basket\BasketItem.cs" />
     <Compile Include="Domain\Basket\BasketItemType.cs" />
-    <Compile Include="Tests\BasketTestBase.cs" />
+    <Compile Include="Tests\DFBasketTestBase.cs" />
     <Compile Include="Domain\Discounts\DTBasketDiscountCalculator.cs" />
     <Compile Include="Domain\Discounts\IBasketDiscountCalculator.cs" />
     <Compile Include="Domain\Discounts\Offers\FourthMilkFreeOffer.cs" />

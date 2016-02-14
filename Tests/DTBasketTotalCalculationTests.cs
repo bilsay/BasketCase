@@ -1,11 +1,10 @@
-﻿using BasketCase.Domain;
-using BasketCase.Domain.Basket;
+﻿using BasketCase.Domain.Basket;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace BasketCase.Tests
 {
     [TestClass]
-    public class DTBasketTotalCalculationTests : BasketTestBase
+    public class DTBasketTotalCalculationTests : DFBasketTestBase
     {
         public void One_Bread_One_Butter_One_Milk_IsAdded()
         {
